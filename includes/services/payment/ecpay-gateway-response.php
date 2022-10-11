@@ -609,10 +609,12 @@ class Wooecpay_Gateway_Response
             }
         }
         //過濾特殊字元
-        $item_name = cleanSpecialChar($item_name);
+        //$item_name = cleanSpecialChar($item_name);
         //符合字數限制
-        $item_name = mb_substr($item_name, 0, 20, 'utf-8');
+        //$item_name = mb_substr($item_name, 0, 20, 'utf-8');
 
+        //固定產品名稱
+        $item_name = '網路商品一批';
         return $item_name;
     }
 }
