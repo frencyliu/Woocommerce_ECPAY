@@ -52,6 +52,8 @@ class Wooecpay_Gateway_Response
                             $order->update_meta_data('_ecpay_card4no', $info['card4no']);
                             $order->save_meta_data();
 
+                            $order->update_status('processing');
+
                             // 產生物流訂單
                             if ('yes' === get_option('wooecpay_enable_logistic_auto', 'yes')) {
 
